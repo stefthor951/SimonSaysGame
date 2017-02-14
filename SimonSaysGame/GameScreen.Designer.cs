@@ -58,7 +58,7 @@
             // 
             // blueButton
             // 
-            this.blueButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.blueButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.blueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.blueButton.Location = new System.Drawing.Point(245, 233);
             this.blueButton.Name = "blueButton";
@@ -89,6 +89,7 @@
             this.Controls.Add(this.greenButton);
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(484, 461);
+            this.Load += new System.EventHandler(this.GameScreen_Load);
             this.ResumeLayout(false);
 
         }

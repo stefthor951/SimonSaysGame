@@ -29,7 +29,5 @@ namespace SimonSaysGame
         {
             Application.Exit();
         }
-
-
     }
 }
