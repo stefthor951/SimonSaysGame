@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace SimonSaysGame
 {
@@ -20,13 +21,20 @@ namespace SimonSaysGame
 
         }
 
-        int patternLength = 1;
         int numGuess = 0;
+        SoundPlayer[] sounds = new SoundPlayer[5];
         Random randNum = new Random();
         List<int> playerGuess = new List<int>();
+        List<int> buttonPattern = new List<int>();
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
+            sounds[0] =  new SoundPlayer(Properties.Resources.green);
+            sounds[1] = new SoundPlayer(Properties.Resources.red);
+            sounds[2] = new SoundPlayer(Properties.Resources.yellow);
+            sounds[3] = new SoundPlayer(Properties.Resources.blue);
+            sounds[4] = new SoundPlayer(Properties.Resources.mistake);
+
             Thread.Sleep(2500);
             Refresh();
             Thread.Sleep(500);
@@ -64,43 +72,47 @@ namespace SimonSaysGame
             blueButton.Enabled = false;
             yellowButton.Enabled = false;
 
-            for (int i = 0; i < patternLength; i++)
+            for (int i = 0; i < Form1.patternLength; i++)
             {
-                Form1.buttonPattern.Add(randNum.Next(0, 4));
+                buttonPattern.Add(randNum.Next(0, 4));
             }
-            for (int i = 0; i < Form1.buttonPattern.Count; i++)
+            for (int i = 0; i < buttonPattern.Count; i++)
             {
-                if (Form1.buttonPattern[i] == 0)
+                if (buttonPattern[i] == 0)
                 {
                     greenButton.BackColor = Color.LimeGreen;
                     Refresh();
+                    sounds[0].Play();
                     Thread.Sleep(650);
                     greenButton.BackColor = Color.Green;
                     Refresh();
                     Thread.Sleep(650);
                 }
-                if (Form1.buttonPattern[i] == 1)
+                if (buttonPattern[i] == 1)
                 {
                     redButton.BackColor = Color.Red;
                     Refresh();
+                    sounds[1].Play();
                     Thread.Sleep(650);
                     redButton.BackColor = Color.DarkRed;
                     Refresh();
                     Thread.Sleep(650);
                 }
-                if (Form1.buttonPattern[i] == 2)
+                if (buttonPattern[i] == 2)
                 {
                     yellowButton.BackColor = Color.Khaki;
                     Refresh();
+                    sounds[2].Play();
                     Thread.Sleep(650);
                     yellowButton.BackColor = Color.Gold;
                     Refresh();
                     Thread.Sleep(650);
                 }
-                if (Form1.buttonPattern[i] == 3)
+                if (buttonPattern[i] == 3)
                 {
                     blueButton.BackColor = Color.SkyBlue;
                     Refresh();
+                    sounds[3].Play();
                     Thread.Sleep(650);
                     blueButton.BackColor = Color.DodgerBlue;
                     Refresh();
@@ -121,22 +133,15 @@ namespace SimonSaysGame
             numGuess++;
             for (int i = 0; i < numGuess; i++)
             {
-                //int q = playerGuess[i];
-                //int e = Form1.buttonPattern[i];
 
-                //if (playerGuess[i] == Form1.buttonPattern[i])
-                //{
+               
 
-                //    //TODO play sound effect and proceed
-                //    greenButton.Visible = false;
-                //    Refresh();
-
-                //}
-                
                 //this will check all of the player's guesses against the actual pattern, if any are incorrect then the player loses
-                if (playerGuess[i] != Form1.buttonPattern[i])
+                if (playerGuess[i] != buttonPattern[i])
                 {
                     //TODO play losing sound effect and go to gameover screen
+                    sounds[4].Play();
+                    Thread.Sleep(1500);
                     Form f = this.FindForm();
                     f.Controls.Remove(this);
 
@@ -144,17 +149,26 @@ namespace SimonSaysGame
                     f.Controls.Add(lose);
 
                 }
-            
+                if (playerGuess[i] == buttonPattern[i])
+                {
+
+                    //TODO play sound effect and proceed
+                    sounds[playerGuess[i]].Play();
+                    Refresh();
+
+                }
             }
 
-            if (numGuess == Form1.buttonPattern.Count)
+            if (numGuess == buttonPattern.Count)
             {
-                Form1.buttonPattern.Clear();
+                buttonPattern.Clear();
                 playerGuess.Clear();
-                patternLength++;
+                Form1.patternLength++;
                 numGuess = 0;
 
+                Thread.Sleep(1000);
                 patternGenerate();
+
             }
         }
     }

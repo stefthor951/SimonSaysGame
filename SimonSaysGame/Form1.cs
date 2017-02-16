@@ -16,7 +16,7 @@ namespace SimonSaysGame
         {
             InitializeComponent();
         }
-        public static List<int> buttonPattern = new List<int>();
+        public static int  patternLength = 1;
 
         private void Form1_Load(object sender, EventArgs e)
         {

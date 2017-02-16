@@ -16,5 +16,10 @@ namespace SimonSaysGame
         {
             InitializeComponent();
         }
+
+        private void GameOverScreen_Load(object sender, EventArgs e)
+        {
+            outputLabel.Text = "Your final pattern length was: " + Form1.patternLength;
+        }
     }
 }
