@@ -38,7 +38,7 @@
             // 
             this.greenButton.BackColor = System.Drawing.Color.Green;
             this.greenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.greenButton.Location = new System.Drawing.Point(139, 127);
+            this.greenButton.Location = new System.Drawing.Point(142, 130);
             this.greenButton.Name = "greenButton";
             this.greenButton.Size = new System.Drawing.Size(100, 100);
             this.greenButton.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.redButton.BackColor = System.Drawing.Color.DarkRed;
             this.redButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.redButton.Location = new System.Drawing.Point(245, 127);
+            this.redButton.Location = new System.Drawing.Point(242, 130);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(100, 100);
             this.redButton.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.blueButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.blueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.blueButton.Location = new System.Drawing.Point(245, 233);
+            this.blueButton.Location = new System.Drawing.Point(242, 230);
             this.blueButton.Name = "blueButton";
             this.blueButton.Size = new System.Drawing.Size(100, 100);
             this.blueButton.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             this.yellowButton.BackColor = System.Drawing.Color.Gold;
             this.yellowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yellowButton.Location = new System.Drawing.Point(139, 233);
+            this.yellowButton.Location = new System.Drawing.Point(142, 230);
             this.yellowButton.Name = "yellowButton";
             this.yellowButton.Size = new System.Drawing.Size(100, 100);
             this.yellowButton.TabIndex = 3;
