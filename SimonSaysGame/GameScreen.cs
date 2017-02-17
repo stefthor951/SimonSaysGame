@@ -37,23 +37,23 @@ namespace SimonSaysGame
             sounds[4] = new SoundPlayer(Properties.Resources.mistake);
 
             GraphicsPath greenButtonPath = new GraphicsPath();
-            greenButtonPath.AddEllipse(0, 0, 200, 200);
-            greenButtonPath.AddEllipse(75, 75, 50, 50);
+            greenButtonPath.AddEllipse(0, 0, 400, 400);
+            greenButtonPath.AddEllipse(150, 150, 100, 100);
             greenButton.Region = new Region(greenButtonPath);
 
             GraphicsPath redButtonPath = new GraphicsPath();
-            redButtonPath.AddEllipse(-100, 0, 200, 200);
-            redButtonPath.AddEllipse(-25, 75, 50, 50);
+            redButtonPath.AddEllipse(-200, 0, 400, 400);
+            redButtonPath.AddEllipse(-50, 150, 100, 100);
             redButton.Region = new Region(redButtonPath);
 
             GraphicsPath blueButtonPath = new GraphicsPath();
-            blueButtonPath.AddEllipse(-25, -25, 50, 50);
-            blueButtonPath.AddEllipse(-100, -100, 200, 200);
+            blueButtonPath.AddEllipse(-50, -50, 100, 100);
+            blueButtonPath.AddEllipse(-200, -200, 400, 400);
             blueButton.Region = new Region(blueButtonPath);
 
             GraphicsPath yellowButtonPath = new GraphicsPath();
-            yellowButtonPath.AddEllipse(75, -25, 50, 50);
-            yellowButtonPath.AddEllipse(0, -100, 200, 200);
+            yellowButtonPath.AddEllipse(150, -50, 100, 100);
+            yellowButtonPath.AddEllipse(0, -200, 400, 400);
             yellowButton.Region = new Region(yellowButtonPath);
 
             Thread.Sleep(2500);

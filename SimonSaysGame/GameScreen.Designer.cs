@@ -32,15 +32,16 @@
             this.redButton = new System.Windows.Forms.Button();
             this.blueButton = new System.Windows.Forms.Button();
             this.yellowButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // greenButton
             // 
             this.greenButton.BackColor = System.Drawing.Color.Green;
             this.greenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.greenButton.Location = new System.Drawing.Point(142, 130);
+            this.greenButton.Location = new System.Drawing.Point(41, 29);
             this.greenButton.Name = "greenButton";
-            this.greenButton.Size = new System.Drawing.Size(100, 100);
+            this.greenButton.Size = new System.Drawing.Size(200, 200);
             this.greenButton.TabIndex = 0;
             this.greenButton.UseVisualStyleBackColor = false;
             this.greenButton.Click += new System.EventHandler(this.greenButton_Click);
@@ -49,9 +50,9 @@
             // 
             this.redButton.BackColor = System.Drawing.Color.DarkRed;
             this.redButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.redButton.Location = new System.Drawing.Point(242, 130);
+            this.redButton.Location = new System.Drawing.Point(243, 29);
             this.redButton.Name = "redButton";
-            this.redButton.Size = new System.Drawing.Size(100, 100);
+            this.redButton.Size = new System.Drawing.Size(200, 200);
             this.redButton.TabIndex = 1;
             this.redButton.UseVisualStyleBackColor = false;
             this.redButton.Click += new System.EventHandler(this.redButton_Click);
@@ -60,9 +61,9 @@
             // 
             this.blueButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.blueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.blueButton.Location = new System.Drawing.Point(242, 230);
+            this.blueButton.Location = new System.Drawing.Point(243, 231);
             this.blueButton.Name = "blueButton";
-            this.blueButton.Size = new System.Drawing.Size(100, 100);
+            this.blueButton.Size = new System.Drawing.Size(200, 200);
             this.blueButton.TabIndex = 2;
             this.blueButton.UseVisualStyleBackColor = false;
             this.blueButton.Click += new System.EventHandler(this.blueButton_Click);
@@ -71,12 +72,23 @@
             // 
             this.yellowButton.BackColor = System.Drawing.Color.Gold;
             this.yellowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.yellowButton.Location = new System.Drawing.Point(142, 230);
+            this.yellowButton.Location = new System.Drawing.Point(41, 231);
             this.yellowButton.Name = "yellowButton";
-            this.yellowButton.Size = new System.Drawing.Size(100, 100);
+            this.yellowButton.Size = new System.Drawing.Size(200, 200);
             this.yellowButton.TabIndex = 3;
             this.yellowButton.UseVisualStyleBackColor = false;
             this.yellowButton.Click += new System.EventHandler(this.yellowButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(192, 197);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 32);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "SIMON";
             // 
             // GameScreen
             // 
@@ -87,6 +99,7 @@
             this.Controls.Add(this.blueButton);
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.greenButton);
+            this.Controls.Add(this.label1);
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(484, 461);
             this.Load += new System.EventHandler(this.GameScreen_Load);
@@ -100,5 +113,6 @@
         private System.Windows.Forms.Button redButton;
         private System.Windows.Forms.Button blueButton;
         private System.Windows.Forms.Button yellowButton;
+        private System.Windows.Forms.Label label1;
     }
 }
