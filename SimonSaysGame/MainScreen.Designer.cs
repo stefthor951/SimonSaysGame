@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.exitButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // exitButton
@@ -56,6 +59,15 @@
             this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(109, 90);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 379);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -63,8 +75,10 @@
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playButton);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "MainScreen";
             this.Size = new System.Drawing.Size(484, 461);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -73,5 +87,6 @@
 
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

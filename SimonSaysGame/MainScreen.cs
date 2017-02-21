@@ -17,8 +17,10 @@ namespace SimonSaysGame
             InitializeComponent();
         }
 
+        
         private void playButton_Click(object sender, EventArgs e)
         {
+            //Proceeds to the primary screen for the game
             Form f = this.FindForm();
             f.Controls.Remove(this);
 

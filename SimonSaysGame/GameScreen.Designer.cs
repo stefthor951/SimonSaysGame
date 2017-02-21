@@ -33,6 +33,7 @@
             this.blueButton = new System.Windows.Forms.Button();
             this.yellowButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // greenButton
@@ -84,11 +85,22 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(192, 197);
+            this.label1.Location = new System.Drawing.Point(195, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "SIMON";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(202, 230);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 32);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "SAYS";
             // 
             // GameScreen
             // 
@@ -100,6 +112,7 @@
             this.Controls.Add(this.redButton);
             this.Controls.Add(this.greenButton);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(484, 461);
             this.Load += new System.EventHandler(this.GameScreen_Load);
@@ -114,5 +127,6 @@
         private System.Windows.Forms.Button blueButton;
         private System.Windows.Forms.Button yellowButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
